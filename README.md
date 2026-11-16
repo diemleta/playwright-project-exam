@@ -42,9 +42,7 @@ It covers the main admin features: **Login**, **Brand**, **Category**, **Product
 | [Playwright](https://playwright.dev/) | Browser automation and test runner |
 | TypeScript | Programming language |
 | [Allure](https://allurereport.org/) | Test reporting |
-| [Faker](https://fakerjs.dev/) | Random test data |
 | dotenv | Load environment variables from `.env` |
-| zod | Data validation |
 | GitHub Actions | Continuous integration |
 
 ---
