@@ -2,7 +2,6 @@ import { test } from "../fixtures/gatekeeper.fixture";
 import { allure, allureMeta, EPIC, FEATURE } from "../utils/allure-meta";
 import { createFullProduct } from "../data/product/product.factory";
 import { createFullCategory } from "../data/category/category.factory";
-import { getTestData } from '../data/common/TestDataRepository';
 import { CMSLoginPage } from "../pages/CMSLoginPage";
 import { CMSDashboardPage } from "../pages/CMSDashboardPage";
 import { CMSBrandPage } from "../pages/CMSBrandPage";
@@ -12,8 +11,6 @@ import { CMSCategoryPage } from "../pages/CMSCategoryPage";
 import { CMSProductPage } from "../pages/CMSProductPage";
 
 test.use({ storageState: { cookies: [], origins: [] } });
-
-const validCredentials = getTestData('login', 'validCredentials');
 
 
 test.describe('Full flow data', { tag: ['@product', '@function', '@full'] }, () => {
@@ -51,7 +48,6 @@ test.describe('Full flow data', { tag: ['@product', '@function', '@full'] }, () 
          const addNewProductPage = new CMSAddNewProductPage(page);
 
 
-         const { email, password } = validCredentials;
          const category = createFullCategory();
          const product = createFullProduct();
 
@@ -59,7 +55,7 @@ test.describe('Full flow data', { tag: ['@product', '@function', '@full'] }, () 
          await allure.step('1. Login to the system', async () => {
             await loginPage.goto();
             await loginPage.expectOnPage();
-            await loginPage.login(email, password);
+            await loginPage.login(process.env.CMS_ADMIN_USERNAME!, process.env.CMS_ADMIN_PASSWORD!);
             await loginPage.expectLoggedIn();
 
          })
