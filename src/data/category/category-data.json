@@ -1,0 +1,35 @@
+{
+  "minimalCategory": {
+    "description": "Get required data",
+    "data": {
+      "name": "Category001"
+    }
+  },
+  "fullCategory": {
+    "description": "Get full data",
+    "data": [
+      {
+        "name": "Category002",
+        "parentCategory": "Sport shoes",
+        "orderingNumber": "1",
+        "type": "Physical",
+        "banner": "candy02.png",
+        "icon": "candy01.jpg",
+        "metaTitle": "meta title category",
+        "metaDescription": "meta description category",
+        "filteringAttributes": "Size"
+      },
+    {
+        "name": "Category002_edit",
+        "parentCategory": "---- Flowers",
+        "orderingNumber": "2",
+        "type": "Digital",
+        "banner": "candy01.jpg",
+        "icon": "candy02.png",
+        "metaTitle": "meta title category edit",
+        "metaDescription": "meta description category edit",
+        "filteringAttributes": "Wooden"
+      }
+    ]
+  }
+}

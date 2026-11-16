@@ -1,0 +1,70 @@
+{
+  "minimalProduct": {
+    "description": "required product",
+    "data": {
+      "name": "Product001",
+      "category": "Cake",
+      "tags": "cake",
+      "unitPrice": 100,
+      "discount": 20,
+      "quantity": 100
+    }
+  },
+  "fullProduct": {
+    "description": "full product data",
+    "data": [
+      {
+        "name": "Product002",
+        "category": "Cake",
+        "brand": "Pizza",
+        "unit": "piece",
+        "weight": 1,
+        "minPurchase": 1,
+        "tags": "cake",
+        "barcode": "123xxx",
+        "galleryImage": "candy01.jpg",
+        "thumbnailImage": "candy02.png",
+        "videoProvider": "Dailymotion",
+        "videoLink": "google.com",
+        "colors": "Aqua",
+        "attributes": "Size",
+        "unitPrice": 100,
+        "discount": 20,
+        "quantity": 200,
+        "productDescription": "This is product description for automation test",
+        "metaTitle": "This is meta title for automation test",
+        "metaDescription": "This is meta description for automation test",
+        "metaImage": "candy01.png",
+        "featured": true,
+        "todaysDeal": true,
+        "published": true
+      },
+      {
+        "name": "Product_edit",
+        "category": "Sport shoes",
+        "brand": "Shoes",
+        "unit": "pairs",
+        "weight": 1,
+        "minPurchase": 2,
+        "tags": "shoes",
+        "barcode": "456xxx",
+        "galleryImage": "candy02.png",
+        "thumbnailImage": "candy01.jpg",
+        "videoProvider": "Dailymotion",
+        "videoLink": "google.com",
+        "colors": "Aqua",
+        "attributes": "Size",
+        "unitPrice": 200,
+        "discount": 10,
+        "quantity": 500,
+        "productDescription": "This is product description for automation test - edit",
+        "metaTitle": "This is meta title for automation test - edit",
+        "metaDescription": "This is meta description for automation test - edit",
+        "metaImage": "candy01.png",
+        "featured": false,
+        "todaysDeal": false,
+        "published": true
+      }
+    ]
+  }
+}

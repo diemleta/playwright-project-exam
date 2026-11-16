@@ -1,0 +1,29 @@
+{
+  "validCredentials": {
+    "description": "Login with valid data",
+    "data": {
+      "testName": "LOGIN_TC_01: Login successfully",
+      "email": "admin@example.com",
+      "password": "***"
+    }
+  },
+  "negativeTestCases": {
+    "description": "Login with invalid data",
+    "data": [
+      {
+        "testName": "LOGIN_TC_02: Login if the email has wrong format(browser validation)",
+        "email": "invalidemail",
+        "password": "123456",
+        "expectedError": "",
+        "validationType": "browser"
+      },
+      {
+        "testName": "LOGIN_TC_03: Login if the password is wrong",
+        "email": "admin@example.com",
+        "password": "wrongpassword",
+        "expectedError": "Invalid login credentials",
+        "validationType": "server"
+      }
+    ]
+  }
+}
