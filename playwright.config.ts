@@ -23,14 +23,10 @@ export default defineConfig({
   testDir: './src',
   globalSetup: require.resolve('./src/setup/global-setup'),
   fullyParallel: true,
-  
   forbidOnly: !!process.env.CI,
-
   retries: process.env.CI ? 2 : 0,
-
-  workers: process.env.CI ? 1 : 2,
-  timeout: 60_000,
-
+  workers: process.env.CI ? 2 : 3,
+  timeout: 60000,
   reporter:[
     ['html',{ outputFolder: 'reports/html',open: 'never', },],
     ['allure-playwright', { resultsDir: 'reports/allure-results',detail: true, suiteTitle: true,
