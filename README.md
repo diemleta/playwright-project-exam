@@ -12,13 +12,12 @@ It covers the main admin features: **Login**, **Brand**, **Category**, **Product
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
 - [Prerequisites](#prerequisites)
-- [Installation](#installation)
 - [Configuration](#configuration)
 - [Running Tests](#running-tests)
 - [Test Reports](#test-reports)
 - [Test Coverage](#test-coverage)
 - [Framework Design](#framework-design)
-- [CI/CD](#cicd)
+
 
 ---
 
@@ -112,22 +111,6 @@ cms-admin-playwright-framework/
 
 ---
 
-## Installation
-
-```bash
-# 1. Clone the repository
-git clone <your-repo-url>
-cd cms-admin-playwright-framework
-
-# 2. Install dependencies
-npm install
-
-# 3. Install Playwright browsers
-npx playwright install --with-deps
-```
-
----
-
 ## Configuration
 
 Create a `.env` file in the project root (this file is ignored by Git):
@@ -145,8 +128,6 @@ AUTH_CACHE_TTL_MS=7200000
 | `CMS_ADMIN_USERNAME` | Yes | Admin email used by the login setup |
 | `CMS_ADMIN_PASSWORD` | Yes | Admin password used by the login setup |
 | `AUTH_CACHE_TTL_MS` | No | How long (ms) the saved session is reused. Default: 2 hours |
-
-> **Note:** The login test cases in `src/data/login/login-cases.json` also contain an email and password. Update them to match your environment.
 
 ### Main Playwright settings (`playwright.config.ts`)
 
@@ -302,23 +283,6 @@ Every page extends `BasePage`, which provides:
 - Image upload from the CMS file manager
 - `fillWithLog()` which logs every input (passwords are masked as `****`)
 
----
-
-## CI/CD
-
-The GitHub Actions workflow (`.github/workflows/playwright.yml`) runs on every push and pull request to `main` / `master`:
-
-1. Checkout code
-2. Set up Node.js (LTS)
-3. `npm ci`
-4. Install Playwright browsers
-5. Run `npx playwright test`
-6. Upload the test report as a build artifact (kept for 30 days)
-
-> **Tip:** Add `BASE_URL`, `CMS_ADMIN_USERNAME` and `CMS_ADMIN_PASSWORD` as **GitHub Secrets** and pass them to the test step as environment variables, because the `.env` file is not committed.
-
----
-
 ## Author
 
-**Diem Le**
+**Le Thi Anh Diem**

@@ -4,8 +4,7 @@ import { test as setup, expect } from "@playwright/test";
 import { CMSLoginPage } from "../pages/CMSLoginPage";
 
 export const ADMIN_AUTH_FILE = path.resolve(__dirname, "../../.auth/admin.json");
-const DEFAULT_AUTH_CACHE_TTL_MS =
-  Number(process.env.AUTH_CACHE_TTL_MS) || 2 * 60 * 60 * 1000;
+const DEFAULT_AUTH_CACHE_TTL_MS = 3600000;
 
 function isAuthFileValid(
   filePath: string,
